@@ -45,7 +45,7 @@ nav li {
     text-align: center;
 }
 
-h1, h2, nav a {
+nav a {
     color: #F7F7F7;
     text-decoration: none;
 }
@@ -125,5 +125,22 @@ h2 {
 }
 
 .button:hover {
+	background-color: #ff8800;
+}
+
+.button-1 {
+	background-color: #ffa400;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-bottom: 40px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.button-1:hover {
 	background-color: #ff8800;
 }
