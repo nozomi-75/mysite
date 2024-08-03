@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Installation Guide</title>
+	<link rel="icon" type="image/x-icon" href="swirl.svg">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+		<h1>Why Debian?</h1>
+	</header>
+	<nav>
+		<ul>
+		    <li><a href="debian.html">Home</a></li>
+		    <li><a href="getting-started.html">Start</a></li>
+		    <li><a href="why-debian.html">Why</a></li>
+		    <li><a href="guide.html">Install</a></li>
+		</ul>
+	</nav>
+	<main style="padding: 60px;">
+		<h1>Getting Familiar with Debian Releases</h1>
+		
+		<h2>Stable</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;"><strong>This release is suggested for normal use.</strong> Choose Debian Stable if you want your computer to just work for a prolonged period of time, without the risk of new packages breaking your workflow. In most cases, when people talk about Debian, they are referring to this.</p>
+		
+		<h2>Testing</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">Choose Debian Testing if you want to have recent software you use, and you are fine with constantly installing updates. <strong>Please be warned that they may be buggy at times.</strong></p>
+		
+		<h2>Unstable</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">Debian Unstable would be handy if it is a must for you to have the absolute latest packages available. If you want to install Unstable, download the image for Stable and upgrade through Testing to Unstable by editing <code>/etc/apt/sources.list</code>. <strong>If timely security updates are important to you, don't use this.</strong></p>
+		
+		<hr>
+		
+		<h1>Choosing your Installation Media</h1>
+		
+		<h2>Network Install Image</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">This netinst ISO contains only a near-minimal Debian system. It is around a several hundred MB, and you can download as many packages you request during the installation process. It is suggested to use a wired connection in the case that your wireless network card won't be recognized.</p>
+		
+		<h2>CD/DVD Image</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">These image is the suggested approach, whereas only the first CD/DVD is required for the installation procedure. The additional images are optional and include extra packages that can be installed later.</p>
+		
+		<h2>Debian Live Images</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">They can start a real Debian system directly from the image without installation, so you can give Debian a try.</p>
+		
+		<a href="https://www.debian.org/distrib/" class="button">Choose your Installation Media</a>
+		
+		<hr>
+		
+		<h2>Creating a Bootable Media</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">After downloading the ISO file, you need to create a bootable media that you can use to install Debian. To create a bootable USB drive from Windows or MacOS, it is suggested to use <a href="https://rufus.ie/en/" style="text-decoration: none; color: #e6457a;">Rufus</a> and select DD writing mode. For Linux, you can simply run <code>cp debian.iso /dev/sdX</code>. <strong>This procedure will wipe the entire USB drive!</strong></p>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">To burn the ISO to a disc in Windows, use <a href="https://www.imgburn.com/" style="text-decoration: none; color: #e6457a;">IMGBurn</a> or the built-in "Burn to disc" option in Windows 10. For MacOS, use the built-in Disc Utility—while for Linux, you can use xfburn or Brasero.</p>
+		
+		<hr>
+		
+		<h2>Booting from Installation Media</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">If you plan to dual-boot with another OS, both of them need to be installed with the same boot mode. You also need to arrange your boot order in the BIOS to prioritize your installation media. You should be able to boot to BIOS in the first few seconds of your computer starting up, by pressing either the F2, F8, F12, and Del keys.</p>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">Debian supports Secure Boot since Debian 11 Buster. If problems arise during Debian installation or boot process, turn off Secure boot before anything else. This guide suggests turning Secure Boot off.</p>
+		
+		<hr>
+		
+		<h2>Installation</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">Debian's Software Selection screen in the installer automatically checks Debian desktop environment. The desktop environment will be your system's user interface, from where you would be able to interact with it 'normally.' If you did not check other boxes, you will install the GNOME desktop. For this case, please check the screenshots of the included desktop environments below.</p>
+		
+		<div class="image-container">
+			<figure>
+				<img src="de/image1.png">
+				<figcaption>GNOME 44 desktop environment, showing the Activities menu.</figcaption>
+			</figure>
+			<figure>
+				<img src="de/image2.png">
+				<figcaption>KDE Plasma Desktop 4, showing the Kate text editor.</figcaption>
+			</figure>
+		</div>
+		
+		<div class="image-container">
+			<figure>
+				<img src="de/image3.png">
+				<figcaption>Xfce 4 desktop with its out-of-the-box configuration.</figcaption>
+			</figure>
+			<figure>
+				<img src="de/image5.png">
+				<figcaption>LXQt 30 desktop environment, showing the 'About LXQt' window.</figcaption>
+			</figure>
+		</div>
+		
+		<div class="image-container">
+			<figure>
+				<img src="de/image4.png">
+				<figcaption>Base LXDE desktop from Lubuntu 9.</figcaption>
+			</figure>
+			<figure>
+				<img src="de/image6.png">
+				<figcaption>Mate desktop environment with its out-of-the-box configuration.</figcaption>
+			</figure>
+		</div>
+		
+		<h2 style="margin-top: 40px;">Networking</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">If your Wi-Fi does not work during the installation, you might need other proprietary firmware for your network card to function. Debian includes non-free firmware since Buster, so this should be the least of your problems. In any case that it won't work, please install Debian using a wired connection and setup wireless connectivity after installing.</p>
+		
+		<h2>Root and Sudo</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">The installation procedure will ask you later to set-up a root account. A root account is the superuser account of a computer or network, usually holding full control over all resources, files, and settings. It is the highest possible level of access that empowers a user to execute everything, edit every file, or configure any setting if need be.</p>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">Normally however, it is not necessary and you can simply skip the process. Doing so would give your account sudo (superuser do) permissions to perform certain operations that require root. Please be reminded however that you can potentially harm your system, in the case that you execute a harmful command or action.</p>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">If in any case that you set up a root account during install, simply run <code>su -l</code> to login to your root account. From that point, run <code>adduser USERNAME sudo</code> to add your account to the sudo group, enabling you to have the similar priveleges as above. Run <code>exit</code> to log-out of the root, log out of the desktop environment and log-in again.</p>
+		
+		<h2>Graphics Drivers</h2>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">You can identify your graphics device by simply referring to the listed VGA compatible controller in lspci, or directly running <code>lspci -nn | egrep -i "3d|display|vga"</code>. If you are using integrated graphics or an AMD dedicated GPU, setting up your drivers should be the least of your worries as it is already included.</p>
+		
+		<p style="line-height: 1.5; font-size: 14pt; text-align: justify; margin-bottom: 40px;">If you happen to be using an NVIDIA graphics card, enable non-free in the /etc/apt/sources.list. Before installing the drivers, you must obtain the proper kernel headers for the driver to build with (linux-headers-amd64 or linux-headers-686). Install and run the nvidia-detect script from the non-free section of the repository to identify the recommended driver package to install. For NVIDIA Optimus graphics, please refer to this separate guide <a href="https://wiki.debian.org/NVIDIA%20Optimus" style="text-decoration: none; color: #e6457a;">here</a>.</p>
+    </main>
+    
+    <footer>
+		<p>&copy; 2024 The Debian Project</p>
+    </footer>
+</body>
+</html>
