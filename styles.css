@@ -87,46 +87,11 @@ footer {
 	background-color: #ff69b4;
 }
 
-.image-container {
+.container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 5px;
-}
-
-.image-container figure {
-	margin: 5px;
-	padding: 5px;
-	background-color: #333;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	width: calc(50%-20px);
-}
-
-.image-container figure img {
-	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	border: none;
-}
-
-figcaption {
-	font-size: 0.9em;
-	color: #e5e5e5;
-	padding: 5px;
-	text-align: left;
-}
-
-/* Media query for desktop */
-@media only screen and (min-width: 768px) {
-  .image-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .image-container figure {
-    width: calc(50% - 20px); /* adjust width for desktop */
-  }
+	margin-top: 20px;
 }
 
 .responsive-image {
@@ -138,6 +103,19 @@ figcaption {
 
 .text-container {
 	flex: 1;
+}
+
+.intro {
+	line-height: 1.5;
+	font-size: 12pt;
+	padding-left: 20px;
+	padding-right: 60px;
+	color: #2c2c2c;
+	text-align: justify;
+}
+
+h2 {
+	margin-top: 0;
 }
 
 @media only screen and (max-width:768px) {
@@ -158,6 +136,7 @@ figcaption {
 
 .welcome {
 	padding: 20px;
+	color: #2c2c2c;
 }
 
 .button-container {
@@ -166,9 +145,8 @@ figcaption {
 }
 
 .button-1 {
-	background-color: #e6457a;
+	background-color: #ffa400;
 	color: white;
-	border-radius: 3px;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -180,5 +158,5 @@ figcaption {
 }
 
 .button-1:hover {
-	background-color: #ff69b4;
+	background-color: #ff8800;
 }
