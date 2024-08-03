@@ -128,3 +128,30 @@ figcaption {
     width: calc(50% - 20px); /* adjust width for desktop */
   }
 }
+
+.responsive-image {
+	max-width: 40%;
+	height: auto;
+	margin: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-container {
+	flex: 1;
+}
+
+@media only screen and (max-width:768px) {
+  .container {
+  flex-direction:column;
+}
+.responsive-image {
+  max-width:80%;
+  margin:0 auto;
+}
+.text-container {
+  margin:20px;
+}
+.intro {
+	padding-right: 20px;
+}
+}
